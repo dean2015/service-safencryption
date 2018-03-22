@@ -9,21 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>safencryption-api</artifactId>
+    <artifactId>safencryption-user-core</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>cn.housecenter.dlfc.framework.starter.web</groupId>
-            <artifactId>dlfc-framework-starter-web</artifactId>
+            <groupId>cn.devcenter.framework</groupId>
+            <artifactId>safencryption-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.devcenter.framework</groupId>
-            <artifactId>safencryption-client-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.devcenter.framework</groupId>
-            <artifactId>safencryption-token-sdk</artifactId>
-            <version>1.0.0</version>
+            <groupId>cn.housecenter.dlfc.common</groupId>
+            <artifactId>dlfc-redis-starter</artifactId>
+            <version>0.0.5.5</version>
         </dependency>
     </dependencies>
+
 </project>

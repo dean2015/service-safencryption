@@ -1,8 +1,11 @@
 package cn.devcenter.framework.safencryption.controller;
 
-import cn.housecenter.dlfc.security.safencryption.api.model.IdentifierDTO;
-import cn.housecenter.dlfc.security.safencryption.core.exception.FlagInvalidException;
-import cn.housecenter.dlfc.security.safencryption.core.service.impl.SafencryptRestService;
+import cn.devcenter.framework.safencryption.core.client.bean.ClientInfo;
+import cn.devcenter.framework.safencryption.core.client.service.RSAService;
+import cn.devcenter.framework.safencryption.core.client.service.SafencryptClientProxy;
+import cn.devcenter.framework.safencryption.core.client.service.impl.RSAServiceImpl;
+import cn.devcenter.framework.safencryption.model.IdentifierDTO;
+import cn.devcenter.model.result.ExecutionResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,16 +22,24 @@ import javax.validation.Valid;
 public class SafencryptRestController {
 
     @Autowired
-    private SafencryptRestService safencryptRestService;
+    private SafencryptClientProxy safencryptClientProxy;
+
+    @Autowired
+    private RSAService rsaService;
 
     @RequestMapping(value = "/apply-public-key", method = RequestMethod.GET)
     public Object applyPublicKey() {
-        return safencryptRestService.applyPublicKey();
+        return rsaService.generatePublicKey();
     }
 
     @RequestMapping(value = "/sign-up-client", method = RequestMethod.POST)
-    public Object signUpClient(@Valid @RequestBody IdentifierDTO identifierDTO) throws FlagInvalidException {
-        return safencryptRestService.signUpClient(identifierDTO.getIdentifier());
+    public Object signUpClient(@Valid @RequestBody IdentifierDTO identifierDTO) {
+        ClientInfo clientInfo = new ClientInfo(identifierDTO.getIdentifier());
+        ExecutionResult<ClientInfo> result = safencryptClientProxy.addClient(clientInfo);
+        if (result.isSuccessful()) {
+            return result.getData();
+        }
+        return null;
     }
 
 }

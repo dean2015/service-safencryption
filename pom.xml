@@ -11,6 +11,9 @@
     <modules>
         <module>safencryption-api</module>
         <module>safencryption-core</module>
+        <module>safencryption-token-sdk</module>
+        <module>safencryption-client-core</module>
+        <module>safencryption-user-core</module>
     </modules>
 
     <properties>
@@ -56,7 +59,17 @@
             </dependency>
             <dependency>
                 <groupId>cn.devcenter.framework</groupId>
-                <artifactId>login-model</artifactId>
+                <artifactId>safencryption-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.devcenter.framework</groupId>
+                <artifactId>safencryption-client-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.devcenter.framework</groupId>
+                <artifactId>safencryption-user-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

@@ -27,12 +27,12 @@ public class SafencryptSignServiceImpl implements SafencryptSignService {
         if (url.contains("sign=")) {
             url = url.substring(0, url.indexOf("sign=") - 1);
         } else {
-            log.error("URL不包含签名部分:" + url);
+            log.error("No sign found in URL: " + url);
             return false;
         }
         String identifier = safencryptClientProxy.getClientIdentifierWithToken(request.getParameter("flag"));
         if (StringUtils.isBlank(identifier)) {
-            log.error("identifier is empty for url: " + url);
+            log.error("identifier not found for url: " + url);
             return false;
         }
         log.debug("url [" + url + "] identifier [" + identifier + "] sign [" + request.getParameter("sign") + "]");

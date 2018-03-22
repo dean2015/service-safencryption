@@ -9,8 +9,6 @@ import cn.devcenter.model.token.ClientIdentity;
 import cn.housecenter.dlfc.framework.web.core.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.UUID;
-
 public class SafencryptClientProxyImpl implements SafencryptClientProxy {
 
     @Autowired

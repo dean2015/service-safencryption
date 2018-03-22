@@ -14,6 +14,7 @@
         <module>safencryption-token-sdk</module>
         <module>safencryption-client-core</module>
         <module>safencryption-user-core</module>
+        <module>safencryption-request-sign</module>
     </modules>
 
     <properties>

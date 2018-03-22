@@ -1,7 +1,8 @@
-package cn.devcenter.framework.safencryption.core.user.service.impl;
+package cn.devcenter.framework.safencryption.core.sign.service.impl;
 
 
-import cn.devcenter.framework.safencryption.core.user.service.SafencryptClientProxy;
+import cn.devcenter.framework.safencryption.core.sign.service.SafencryptClientProxy;
+import cn.devcenter.framework.safencryption.core.sign.service.SafencryptSignService;
 import cn.devcenter.framework.safencryption.core.util.HMAC;
 import cn.housecenter.dlfc.framework.boot.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
@@ -15,11 +16,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Slf4j
 @Service
-public class SafencryptSignService {
+public class SafencryptSignServiceImpl implements SafencryptSignService {
 
     @Autowired
     private SafencryptClientProxy safencryptClientProxy;
 
+    @Override
     public boolean checkSign(HttpServletRequest request) {
         String url = request.getRequestURI() + "?" + request.getQueryString();
         if (url.contains("sign=")) {

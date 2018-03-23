@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Slf4j
-@Component
+@Service
 public class SafencryptionTokenServiceFallback implements SafencryptionTokenService {
 
     @RequestMapping(value = "/generate/fallback", method = RequestMethod.POST)

@@ -2,7 +2,7 @@ package cn.devcenter.framework.safencryption.core.user.service.impl;
 
 import cn.devcenter.framework.safencryption.core.user.annotation.EncryptionType;
 import cn.devcenter.framework.safencryption.core.user.service.EncryptionService;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
+import org.springframework.stereotype.Service;
 
 @EncryptionType(value = 1)
 @Service

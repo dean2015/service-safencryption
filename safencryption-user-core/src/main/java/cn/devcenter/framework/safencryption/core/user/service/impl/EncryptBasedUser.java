@@ -1,10 +1,11 @@
 package cn.devcenter.framework.safencryption.core.user.service.impl;
 
 import cn.devcenter.framework.safencryption.core.user.annotation.EncryptionType;
+import cn.devcenter.framework.safencryption.core.user.bean.SafencryptResponse;
 import cn.devcenter.framework.safencryption.core.user.service.EncryptionService;
 import cn.devcenter.framework.safencryption.core.user.service.SafencryptUserProxy;
 import cn.devcenter.framework.safencryption.core.util.AES;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
+import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -19,6 +20,7 @@ public class EncryptBasedUser implements EncryptionService {
 
     @Override
     public String encrypt(String content, String flag) {
-        return AES.encrypt(content, safencryptUserProxy.getUserIdentifierWithToken(flag));
+        String encryptData = AES.encrypt(content, safencryptUserProxy.getUserIdentifierWithToken(flag));
+        return SafencryptResponse.newInstance(4, encryptData).toString();
     }
 }

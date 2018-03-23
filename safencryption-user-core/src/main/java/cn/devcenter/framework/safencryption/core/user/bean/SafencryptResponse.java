@@ -28,6 +28,10 @@ public class SafencryptResponse {
         this.data = data;
     }
 
+    public static SafencryptResponse newInstance(Integer type, String data) {
+        return new SafencryptResponse(type, data);
+    }
+
     @Override
     public String toString() {
         return new Gson().toJson(this);

@@ -4,16 +4,14 @@ import cn.devcenter.framework.safencryption.core.user.annotation.DecryptionType;
 import cn.devcenter.framework.safencryption.core.user.service.DecryptionService;
 import cn.devcenter.framework.safencryption.core.user.service.SafencryptUserProxy;
 import cn.devcenter.framework.safencryption.core.util.AES;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 解密基于用户有关业务的响应
  */
-@Slf4j
-@DecryptionType(value = 4)
 @Service
+@DecryptionType(value = 4)
 public class DecryptionBasedUser implements DecryptionService {
 
     @Autowired

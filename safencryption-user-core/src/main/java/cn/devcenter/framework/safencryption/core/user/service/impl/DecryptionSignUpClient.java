@@ -1,22 +1,20 @@
 package cn.devcenter.framework.safencryption.core.user.service.impl;
 
-import cn.devcenter.framework.safencryption.core.exception.FlagInvalidException;
 import cn.devcenter.framework.safencryption.core.user.annotation.DecryptionType;
 import cn.devcenter.framework.safencryption.core.user.service.DecryptionService;
 import cn.devcenter.framework.safencryption.core.user.service.RSADecryptService;
 import cn.devcenter.framework.safencryption.core.util.JsonUtils;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
-import com.netflix.discovery.converters.Auto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * 解密注册客户端的消息
  */
-@DecryptionType(value = 2)
 @Service
+@DecryptionType(value = 2)
 public class DecryptionSignUpClient implements DecryptionService {
 
     @Autowired

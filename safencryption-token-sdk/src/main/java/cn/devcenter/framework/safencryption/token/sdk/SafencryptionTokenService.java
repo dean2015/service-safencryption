@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface SafencryptionTokenService {
 
     @RequestMapping(value = "/generate", method = RequestMethod.POST)
-    AjaxResult<Void> generateAccessToken(AccessToken token);
+    AjaxResult<AccessToken> generateAccessToken(AccessToken token);
 }

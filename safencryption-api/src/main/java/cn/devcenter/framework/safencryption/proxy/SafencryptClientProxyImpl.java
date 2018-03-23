@@ -24,7 +24,7 @@ public class SafencryptClientProxyImpl implements SafencryptClientProxy {
         accessToken.setClientIdentity(clientIdentity);
         accessToken.setToken(clientInfo.getCToken());
         accessToken.setExpiredPeriod(DEFAULT_CTOKEN_EXPIRE_TIME_MILLIS);
-        AjaxResult<Void> result = safencryptionTokenService.generateAccessToken(accessToken);
+        AjaxResult<AccessToken> result = safencryptionTokenService.generateAccessToken(accessToken);
         if (result.successful()) {
             return ExecutionResult.newInstance(ClientInfo.class).success("Register token successfully", clientInfo);
         } else {

@@ -6,9 +6,11 @@ import cn.devcenter.framework.safencryption.token.sdk.SafencryptionTokenService;
 import cn.devcenter.model.result.ExecutionResult;
 import cn.devcenter.model.token.AccessToken;
 import cn.devcenter.model.token.ClientIdentity;
+import cn.housecenter.dlfc.framework.boot.stereotype.Service;
 import cn.housecenter.dlfc.framework.web.core.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
+@Service
 public class SafencryptClientProxyImpl implements SafencryptClientProxy {
 
     @Autowired

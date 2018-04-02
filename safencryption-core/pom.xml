@@ -30,8 +30,8 @@
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.housecenter.dlfc.framework.boot</groupId>
-            <artifactId>dlfc-framework-boot</artifactId>
+            <groupId>cn.devcenter.model</groupId>
+            <artifactId>stereotype</artifactId>
         </dependency>
     </dependencies>
 </project>

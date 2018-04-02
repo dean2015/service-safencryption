@@ -3,7 +3,7 @@ package cn.devcenter.framework.safencryption.core.user.runner;
 import cn.devcenter.framework.safencryption.core.user.annotation.EncryptionType;
 import cn.devcenter.framework.safencryption.core.user.service.EncryptionService;
 import cn.devcenter.framework.safencryption.core.user.service.impl.EncryptionServiceManager;
-import cn.housecenter.dlfc.framework.boot.stereotype.Component;
+import cn.devcenter.model.stereotype.Component;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

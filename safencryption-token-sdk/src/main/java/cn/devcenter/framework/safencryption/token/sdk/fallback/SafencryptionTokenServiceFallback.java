@@ -1,13 +1,10 @@
 package cn.devcenter.framework.safencryption.token.sdk.fallback;
 
 import cn.devcenter.framework.safencryption.token.sdk.SafencryptionTokenService;
+import cn.devcenter.model.result.AjaxResult;
+import cn.devcenter.model.stereotype.Service;
 import cn.devcenter.model.token.AccessToken;
-import cn.housecenter.dlfc.framework.boot.stereotype.Component;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
-import cn.housecenter.dlfc.framework.web.core.AjaxResult;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 

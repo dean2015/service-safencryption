@@ -1,12 +1,11 @@
 package cn.devcenter.framework.safencryption.core.user.service.impl;
 
 
-import cn.devcenter.framework.safencryption.core.exception.FlagInvalidException;
 import cn.devcenter.framework.safencryption.core.user.service.RSADecryptService;
 import cn.devcenter.framework.safencryption.core.util.ObjectUtils;
 import cn.devcenter.framework.safencryption.core.util.RSA;
+import cn.devcenter.model.stereotype.Service;
 import cn.housecenter.dlfc.common.redis.Redis;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;

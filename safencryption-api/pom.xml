@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>cn.housecenter.dlfc.framework.starter.web</groupId>
-            <artifactId>dlfc-framework-starter-web</artifactId>
+            <groupId>cn.devcenter.framework</groupId>
+            <artifactId>web-jetty</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.devcenter.framework</groupId>

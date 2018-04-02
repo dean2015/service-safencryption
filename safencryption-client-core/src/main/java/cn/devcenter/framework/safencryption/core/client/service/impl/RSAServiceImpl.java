@@ -2,12 +2,11 @@ package cn.devcenter.framework.safencryption.core.client.service.impl;
 
 import cn.devcenter.framework.safencryption.core.client.bean.SafencryptPublicKey;
 import cn.devcenter.framework.safencryption.core.client.service.RSAService;
-import cn.devcenter.framework.safencryption.core.exception.FlagInvalidException;
 import cn.devcenter.framework.safencryption.core.util.Const;
 import cn.devcenter.framework.safencryption.core.util.ObjectUtils;
 import cn.devcenter.framework.safencryption.core.util.RSA;
+import cn.devcenter.model.stereotype.Service;
 import cn.housecenter.dlfc.common.redis.Redis;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
@@ -42,9 +41,9 @@ public class RSAServiceImpl implements RSAService {
         return Redis.contain(flag);
     }
 
-    private static String decryptJSRequest(String flag, String content) throws FlagInvalidException {
+    private static String decryptJSRequest(String flag, String content)  {
         if (StringUtils.isBlank(flag) || !RSAServiceImpl.containFlag(flag)) {
-            throw new FlagInvalidException();
+            return "";
         }
         KeyPair keyPair = (KeyPair) ObjectUtils.unserialize((byte[]) Redis.get(flag));
         try {

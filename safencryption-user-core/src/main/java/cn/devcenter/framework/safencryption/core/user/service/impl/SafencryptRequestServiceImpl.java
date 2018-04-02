@@ -2,7 +2,7 @@ package cn.devcenter.framework.safencryption.core.user.service.impl;
 
 import cn.devcenter.framework.safencryption.core.user.service.DecryptionService;
 import cn.devcenter.framework.safencryption.core.user.service.SafencryptRequestService;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
+import cn.devcenter.model.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 
 /**

@@ -4,7 +4,7 @@ package cn.devcenter.framework.safencryption.core.sign.service.impl;
 import cn.devcenter.framework.safencryption.core.sign.service.SafencryptClientProxy;
 import cn.devcenter.framework.safencryption.core.sign.service.SafencryptSignService;
 import cn.devcenter.framework.safencryption.core.util.HMAC;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
+import cn.devcenter.model.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

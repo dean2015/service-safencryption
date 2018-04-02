@@ -3,11 +3,11 @@ package cn.devcenter.framework.safencryption.proxy;
 import cn.devcenter.framework.safencryption.core.client.bean.ClientInfo;
 import cn.devcenter.framework.safencryption.core.client.service.SafencryptClientProxy;
 import cn.devcenter.framework.safencryption.token.sdk.SafencryptionTokenService;
+import cn.devcenter.model.result.AjaxResult;
 import cn.devcenter.model.result.ExecutionResult;
+import cn.devcenter.model.stereotype.Service;
 import cn.devcenter.model.token.AccessToken;
 import cn.devcenter.model.token.ClientIdentity;
-import cn.housecenter.dlfc.framework.boot.stereotype.Service;
-import cn.housecenter.dlfc.framework.web.core.AjaxResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
